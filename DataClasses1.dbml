@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Database1" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Database1ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Equipment" Member="EquipmentTables">
+    <Type Name="EquipmentTables">
+      <Column Name="Equipment_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ชื่ออุปกรณ์" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="รายละเอียดอุปกรณ์" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="user_username" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="เบอร์โทรติดต่อเจ้าของ" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ชื่อช่างซ่อม" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="username_Employee" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="รายละเอียดการซ่อม" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ราคาซ่อม" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="สถานะซ่อม" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="วันที่ได้รับสินค้า" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="วันที่คาดว่าจะสินค้าแล้วเสร็จ" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="หมายเหตุ" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Pic" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EquipmentCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ราคาประเมิน" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.stock" Member="stocks">
+    <Type Name="stock">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="stock_type" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="stock_name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="stock_model" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="stock_of_devices" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="stock_price" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Column Name="stock_cost" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Column Name="stock_Margin1" Type="System.Decimal" DbType="SmallMoney" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="stock_model_name" Type="System.String" DbType="NVarChar(MAX)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TableID" Member="TableIDs">
+    <Type Name="TableID">
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_username" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="user_password" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="user_type" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="user_FnameLname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="user_phonenumber" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="user_Address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.สถานะ" Member="สถานะs">
+    <Type Name="สถานะ">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="สถานะ" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ชนิดอุปกรณ์" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mail" Member="Mails">
+    <Type Name="Mail">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ชื่อผู้ส่ง" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="[ติดต่อเรา/ข้อเสนอแนะ]" Member="ติดต่อเรา_ข้อเสนอแนะ" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="คะแนน" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
